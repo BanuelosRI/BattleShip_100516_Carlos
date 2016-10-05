@@ -4,8 +4,26 @@
 // Create a 10 x 10 table using for loops
 $(document).ready(function() {
   var html = "";
-
   console.log("Creating the 10 X 10 board");
+  var board = [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ];
+
+  //glabal var that should be constant
+  var SHIP = 1;
+
+  var shotsFired = 0;
+  console.log("Torpedoes shot by user: " + shotsFired);
+
   // This for loop creates the 10 table rows
   for(tableRow = 0; tableRow < 10; tableRow++) {
     html = html + "<tr>";
@@ -23,9 +41,13 @@ $(document).ready(function() {
 
   //Function to add color to the clicked td.
   $("td").on("click", function() {
+    shotsFired++;
+    console.log("Torpedoes shot by user: " + shotsFired);
     //Adds the torpedoed class to the td that was selected by the user and disables the clicked td.
     $(this).addClass("torpedoed");
     $(this).off();
+    $("h2").text("Torpedoes shot by user: " + shotsFired);
+
   })
 
 
