@@ -1,0 +1,12 @@
+table {
+  height: 500px;
+  width:500px;
+  background: #3eb4c6;
+}
+td {
+  border: inset;
+}
+
+torpedoed {
+  color: red;
+}
