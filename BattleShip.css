@@ -7,6 +7,6 @@ td {
   border: inset;
 }
 
-torpedoed {
-  color: red;
+.torpedoed {
+  background-color: red;
 }

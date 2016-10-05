@@ -20,6 +20,13 @@ $(document).ready(function() {
   }
   // this appends everything the lopps did and adds it the the <table>
   $("table").append(html);
-});
 
-// comment for git purposes
+  //Function to add color to the clicked td.
+  $("td").on("click", function() {
+    //Adds the torpedoed class to the td that was selected by the user and disables the clicked td.
+    $(this).addClass("torpedoed");
+    $(this).off();
+  })
+
+
+});
