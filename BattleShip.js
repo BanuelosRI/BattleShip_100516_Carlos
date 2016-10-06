@@ -29,7 +29,7 @@ $(document).ready(function() {
   randomShipPlacement();
 
   // Track shots fired
-  var shotsFired = 0;
+  var shotsFired = 25;
   // Track shots that hit ships
   var shipsHit = 0;
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
     var col = x.charAt(1);
 
     // Shots fired counter
-    shotsFired++;
+    shotsFired--;
 
     console.log("\n");
 
@@ -85,7 +85,7 @@ $(document).ready(function() {
       }
 
       // Let user know the game is over at 25 shots, updates p, turn off all td's and display all ships (see 'gameOver' function)
-      if (shotsFired === 25 && shipsHit != 5) {
+      if (shotsFired === 0 && shipsHit != 5) {
         $("p").text("You have lost!");
         $("td").off();
         gameOver();
@@ -103,7 +103,7 @@ function make_board() {
   console.log("Creating html board ");
 
   // Update h2
-  $("h2").text("Torpedoes shot by user: 0");
+  $("h2").text("Torpedoes shot by user: 25");
 
   // Loop creates the 10 table rows
   var html_board = "";
@@ -152,6 +152,7 @@ function randomShipPlacement() {
 function gameOver() {
   for (row = 0; row < 10; row++) {
     for (col = 0; col < 10; col++) {
+
 
       // Checks if there is a ship in the indexes ([row] & [col]) are in the array
       if(board[row][col] == SHIP ) {
