@@ -1,6 +1,6 @@
 table {
-  height: 500px;
-  width:500px;
+  height: 450px;
+  width: 450px;
   background: #3eb4c6;
 }
 td {
@@ -9,4 +9,8 @@ td {
 
 .torpedoed {
   background-color: red;
+}
+
+.ship {
+  background-color: #777;
 }
