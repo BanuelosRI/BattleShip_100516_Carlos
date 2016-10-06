@@ -7,10 +7,14 @@ td {
   border: inset;
 }
 
-.torpedoed {
+.missed {
   background-color: red;
 }
 
 .ship {
   background-color: #777;
+}
+
+.hit {
+  background-color: gray;
 }
